@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/homeScreen.dart';
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -10,6 +12,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "WhatsApp Clone",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xFF075E54),
         accentColor: Color(0xFF128C7E),
@@ -22,6 +25,10 @@ class _MyAppState extends State<MyApp> {
 class WhatsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: HomeScreen(),
+    );
   }
 }
+
+void main() => runApp(MyApp());
