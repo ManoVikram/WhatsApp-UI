@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './screens/homeScreen.dart';
+import './screens/userChatScreen.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -18,6 +19,9 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(0xFF128C7E),
       ),
       home: WhatsApp(),
+      routes: {
+        UserChatScreen.routeName: (contxt) => UserChatScreen(),
+      },
     );
   }
 }
